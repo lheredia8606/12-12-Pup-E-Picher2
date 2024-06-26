@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import { globalStates } from "../Providers/StateProvider";
-import { Dog, TActiveTab } from "../types";
+import { UseGlobalDog } from "../Providers/DogProvider";
+import { getFilteredDogs } from "../types-helpers";
+import { UseGlobalActiveTab } from "../Providers/TabProvider";
 
 export const Section = ({
   label,
@@ -10,20 +11,8 @@ export const Section = ({
   label: string;
   children: ReactNode;
 }) => {
-  
-  const { activeTab, allDogs, setActiveTab } = globalStates();
-
-  const getDogFavCount = (favorite: boolean) => {
-    return allDogs.reduce((count: number, dog: Dog) => {
-      return dog.isFavorite === favorite ? count + 1 : count;
-    }, 0);
-  };
-
-  const changeActiveTab = (newActiveTab: TActiveTab) => {
-    activeTab === newActiveTab
-      ? setActiveTab("none")
-      : setActiveTab(newActiveTab);
-  };
+  const { allDogs } = UseGlobalDog();
+  const { selectedTab, changeTab } = UseGlobalActiveTab();
 
   return (
     <section id="main-section">
@@ -32,27 +21,33 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            className={`selector ${activeTab === "favorite" ? "active" : ""}`}
+            className={`selector ${selectedTab === "favorite" ? "active" : ""}`}
             onClick={() => {
-              changeActiveTab("favorite");
+              changeTab("favorite");
             }}
           >
-            favorited ( {getDogFavCount(true)} )
+            favorited ( {getFilteredDogs(allDogs, { isFavorite: true }).length}{" "}
+            )
           </div>
 
           {/* This should display the unfavorited count */}
           <div
-            className={`selector ${activeTab === "unFavorite" ? "active" : ""}`}
+            className={`selector ${
+              selectedTab === "unfavorite" ? "active" : ""
+            }`}
             onClick={() => {
-              changeActiveTab("unFavorite");
+              changeTab("unfavorite");
             }}
           >
-            unfavorited ( {getDogFavCount(false)} )
+            unfavorited ({" "}
+            {getFilteredDogs(allDogs, { isFavorite: false }).length} )
           </div>
           <div
-            className={`selector ${activeTab === "createDog" ? "active" : ""}`}
+            className={`selector ${
+              selectedTab === "createDog" ? "active" : ""
+            }`}
             onClick={() => {
-              changeActiveTab("createDog");
+              changeTab("createDog");
             }}
           >
             create dog

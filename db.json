@@ -11,28 +11,28 @@
       "name": "Anthony",
       "image": "/src/assets/cowardly.png",
       "description": "plum Savings female Ghana programming solutions miniaturise",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 1
     },
     {
       "name": "Ana",
       "image": "/src/assets/boxer.png",
       "description": "Analyst function withdrawal United while",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 4
     },
     {
       "name": "Alfred",
       "image": "/src/assets/cowardly.png",
       "description": "Northwest DRAM henry applications South",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 5
     },
     {
       "name": "Violette",
       "image": "/src/assets/boxer.png",
       "description": "embrace Web Southwest perspiciatis though",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 6
     },
     {
@@ -60,14 +60,14 @@
       "name": "Elton",
       "image": "/src/assets/blue-heeler.png",
       "description": "Nihonium Electronic Nissan Metal because Computer white",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 10
     },
     {
       "name": "Dewayne",
       "image": "/src/assets/dalmation.png",
       "description": "Security override firewall Southeast apropos Usability orchid barrel",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 11
     },
     {
@@ -81,14 +81,14 @@
       "name": "Sebastian",
       "image": "/src/assets/boxer.png",
       "description": "Associate Gasoline Savings Hybrid Developer",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
       "name": "Lambert",
       "image": "/src/assets/chihuahua.avif",
       "description": "drive reek Marvin compress executive Coordinator Track bluetooth",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 14
     },
     {
@@ -109,7 +109,7 @@
       "name": "Meaghan",
       "image": "/src/assets/dalmation.png",
       "description": "lux Manager North applications Rufiyaa",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
@@ -123,8 +123,15 @@
       "name": "Newton",
       "image": "/src/assets/blue-heeler.png",
       "description": "Planner maxime invoice ROI granular ouch Franc",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 19
+    },
+    {
+      "description": "dsdsdsds",
+      "image": "/src/assets/dalmation.png",
+      "isFavorite": false,
+      "name": "sdsd",
+      "id": 20
     }
   ]
 }

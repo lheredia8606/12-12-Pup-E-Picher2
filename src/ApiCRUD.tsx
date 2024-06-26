@@ -4,10 +4,10 @@ export class ApiCRUD<T> {
   getAll(): Promise<T[]> {
     return fetch(this.baseUrl)
       .then((response) => {
-        if (!response.ok) throw new Error("could not gell all Elements");
-        return response;
+        if (!response.ok) throw new Error("could not get all Elements");
+        return response.json();
       })
-      .then((resolve) => resolve.json());
+      .then((data: T[]) => data);
   }
 
   post(element: Omit<T, "id">): Promise<T> {
@@ -20,9 +20,9 @@ export class ApiCRUD<T> {
     })
       .then((response) => {
         if (!response.ok) throw new Error("could not add the Element");
-        return response;
+        return response.json();
       })
-      .then((resolve) => resolve.json());
+      .then((data: T) => data);
   }
 
   delete(id: number): Promise<T> {
@@ -34,9 +34,9 @@ export class ApiCRUD<T> {
     })
       .then((response) => {
         if (!response.ok) throw new Error("could not erase the Element");
-        return response;
+        return response.json();
       })
-      .then((resolve) => resolve.json());
+      .then((data: T) => data);
   }
 
   update(id: number, element: Partial<T>): Promise<T> {
@@ -46,9 +46,11 @@ export class ApiCRUD<T> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(element),
-    }).then((response) => {
-      if (!response.ok) throw new Error("could not update the element");
-      return response.json();
-    });
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("could not update the element");
+        return response.json();
+      })
+      .then((data: T) => data);
   }
 }

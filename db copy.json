@@ -4,28 +4,28 @@
       "name": "Jonatan",
       "image": "/src/assets/boxer.png",
       "description": "Shoes after Dollar Marketing female generating Diesel",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 0
     },
     {
       "name": "Anthony",
       "image": "/src/assets/cowardly.png",
       "description": "plum Savings female Ghana programming solutions miniaturise",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 1
     },
     {
       "name": "Ana",
       "image": "/src/assets/boxer.png",
       "description": "Analyst function withdrawal United while",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 4
     },
     {
       "name": "Alfred",
       "image": "/src/assets/cowardly.png",
       "description": "Northwest DRAM henry applications South",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 5
     },
     {
@@ -39,7 +39,7 @@
       "name": "Kenton",
       "image": "/src/assets/cowardly.png",
       "description": "Bedfordshire Human tempora Managed Electronic Directives Nissan expedite",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 7
     },
     {
@@ -53,7 +53,7 @@
       "name": "Nicolas",
       "image": "/src/assets/chihuahua.avif",
       "description": "an Savings brink transmit card",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
@@ -74,14 +74,14 @@
       "name": "Art",
       "image": "/src/assets/blue-heeler.png",
       "description": "Global ha Genderflux payment Metal pixel Money",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 12
     },
     {
       "name": "Sebastian",
       "image": "/src/assets/boxer.png",
       "description": "Associate Gasoline Savings Hybrid Developer",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
@@ -109,7 +109,7 @@
       "name": "Meaghan",
       "image": "/src/assets/dalmation.png",
       "description": "lux Manager North applications Rufiyaa",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
@@ -123,7 +123,7 @@
       "name": "Newton",
       "image": "/src/assets/blue-heeler.png",
       "description": "Planner maxime invoice ROI granular ouch Franc",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 19
     }
   ]
